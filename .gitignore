@@ -225,3 +225,4 @@ sample_message_stream.json
 logs/*
 .mcpworld/*
 temp/*
+.DS_Store

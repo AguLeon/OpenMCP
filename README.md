@@ -1,5 +1,5 @@
 # OpenMCP: a fully open-source and self-hosted testbed for MCP-enabled CUA benchmarking
-![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Docker](https://img.shields.io/badge/Docker-Supported-green.svg) [![ChameleonCloud](/docs/run-on-chameleon-badge.svg)](https://trovi.chameleoncloud.org/dashboard/artifacts/31fc62a4-1996-4719-957e-4c1b4e47b1b6)
+![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Docker](https://img.shields.io/badge/Docker-Supported-green.svg) [![ChameleonCloud](/docs/run-on-chameleon-badge.svg)](https://trovi.chameleoncloud.org/dashboard/artifacts/31fc62a4-1996-4719-957e-4c1b4e47b1b6) [![Dataset on HF](https://huggingface.co/datasets/huggingface/badges/resolve/main/dataset-on-hf-md.svg)](https://huggingface.co/datasets/aguleon/OpenMCP_dataset_v1)
 
 OpenMCP is an open-source benchmarking framework designed for evaluating MCP-enabled **Computer-Using Agents (CUAs)**. It supports agents that interact with software applications via **GUI**, **API (Model Context Protocol – MCP)**, or **Hybrid** methods.
 

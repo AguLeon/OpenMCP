@@ -5,10 +5,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: mcpworld:pc-canary
-    container_name: mcpworld
+    image: openmcp:pc-canary
+    container_name: openmcp
     volumes:
-      - ../../MCPWorld/:/workspace
+      - ../../OpenMCP/:/workspace
     shm_size: "1g"
     security_opt:
       - seccomp:unconfined

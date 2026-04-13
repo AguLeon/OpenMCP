@@ -78,8 +78,8 @@ Kick off OpenMCP environment with the essentials below. Each step explains what 
 
 ## 0. Cloning the repo
 ```bash
-git clone https://github.com/AguLeon/MCPWorld
-cd MCPWorld
+git clone https://github.com/AguLeon/OpenMCP
+cd OpenMCP
 git submodule update --init PC-Canary
 ```
 
@@ -97,7 +97,7 @@ Once you have the configuration set, you can move to the next step.
 Bring up the container stack using the `entrypoint,sh` script. This boots the desktop environment, VNC/noVNC services, Ollama, and prepares the shared workspace volume.
 
 ```bash
-cd ~/MCPWorld
+cd ~/OpenMCP
 ./scripts/entrypoint.sh <infrastructure_tag>
 
 # Example:
@@ -115,11 +115,11 @@ The entrypoint script will:
   ./scripts/entrypoint.sh --rebuild H100x1
   ```
 
-- SUDO password for `mcpworld` environment : `123`
+- SUDO password for `openmcp` environment : `123`
 
 ### What starts automatically:
-The entrypoint script always launches 2 containers; `mcpworld` and `ollama`:
-- In `mcpworld` container, following are run automatically:
+The entrypoint script always launches 2 containers; `openmcp` and `ollama`:
+- In `openmcp` container, following are run automatically:
     - TurboVNC (display `:4`),
     - The noVNC web proxy (port `6080`),
     - Streamlit to demo LLM and agent's action (port 8501)
@@ -156,7 +156,7 @@ After the environment, is created, necessary services are created, and the apps 
 There are 2 main ways it can be done:
 - From the host machine
     - Running multiple tests across LLM models (`./scripts/run_multi_model_benchmark.sh`)
-- From the docker container (`mcpworld`)
+- From the docker container (`openmcp`)
     - Running multiple tests for single LLM Model (`/workspace/scripts/run_tasks_range.sh`)
 ```bash
 ./scripts/run_tasks_range.sh [app-name] [start-task] [end-task]
@@ -198,7 +198,7 @@ There are 2 main ways it can be done:
 
 ## Project Structure
 ```
-MCPWorld/
+OpenMCP/
 ├── computer-use-demo/           # Agent implementation
 │   ├── computer_use_demo/
 │   │   ├── loop.py              # Main sampling loop
@@ -221,7 +221,7 @@ MCPWorld/
 │   │   └── context_data/        # Pre-configured app states
 │   └── apps/                    # Application source repositories
 ├── docker/                      # Container configuration
-│   ├── docker-compose.yml       # Multi-container setup (mcpworld + ollama)
+│   ├── docker-compose.yml       # Multi-container setup (openmcp+ ollama)
 │   ├── Dockerfile
 │   ├── start_service.sh
 │   └── apps_install_scripts/    # App installation scripts
@@ -326,16 +326,7 @@ All settings below are defined in `./scripts/config.cfg`.
 
 ---
 
-<!-- ## 📖 Citation
 
-```bibtex
-@inproceedings{MCPWorld2025,
-  title     = {MCPWorld: A Multi-Modal Test Platform for Computer-Using Agents},
-  author    = {YourName and Author1 and Author2},
-  booktitle = {NeurIPS 2025},
-  year      = {2025}
-}
-``` -->
 
 <!-- --- -->
 
